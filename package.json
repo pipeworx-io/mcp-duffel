@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-duffel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Duffel MCP — live flight search + pricing via the Duffel Flights API (duffel.com)",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-duffel": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "duffel"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-duffel"
+    "url": "git+https://github.com/pipeworx-io/mcp-duffel.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-59699da626812b4890c2091588c4e3e866f855ad5fb844a61fdc68556750a0d0",
+    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
   }
 }
