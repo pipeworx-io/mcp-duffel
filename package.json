@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-duffel",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Duffel MCP — live flight search + pricing via the Duffel Flights API (duffel.com)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-59699da626812b4890c2091588c4e3e866f855ad5fb844a61fdc68556750a0d0",
-    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
+    "sourceHash": "v1-41ee34e5648358f254491d7a029372df08db1d01e96a11746ad32242bdac86d2",
+    "sourceCommit": "4fa4c64448be06f4a2ee4cee19f756f3558a7cad"
   }
 }
