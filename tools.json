@@ -1,0 +1,51 @@
+[
+  {
+    "name": "duffel_flight_search",
+    "description": "Search flights (with pricing) from <origin> to <destination> on <date> — returns the 5 cheapest real, bookable offers from the Duffel Flights API, each with total price, airline, and per-segment flight numbers/times. Pass `return_date` for a round trip. This is REAL flight inventory: use a Duffel test token (duffel_test_...) for sandbox results. Example: duffel_flight_search({ origin: \"JFK\", destination: \"LHR\", departure_date: \"2026-08-15\", passengers: 2, cabin_class: \"economy\", _apiKey: \"duffel_test_...\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "origin": {
+          "type": "string",
+          "description": "Origin airport IATA code, e.g. \"JFK\""
+        },
+        "destination": {
+          "type": "string",
+          "description": "Destination airport IATA code, e.g. \"LHR\""
+        },
+        "departure_date": {
+          "type": "string",
+          "description": "Outbound date in YYYY-MM-DD format, e.g. \"2026-08-15\""
+        },
+        "return_date": {
+          "type": "string",
+          "description": "Optional return date (YYYY-MM-DD). If given, searches a round trip (destination back to origin on this date)."
+        },
+        "passengers": {
+          "type": "integer",
+          "description": "Number of adult passengers (default 1, max 9)"
+        },
+        "cabin_class": {
+          "type": "string",
+          "description": "Optional cabin: economy, premium_economy, business, or first",
+          "enum": [
+            "economy",
+            "premium_economy",
+            "business",
+            "first"
+          ]
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Your Duffel access token (from duffel.com). A test token \"duffel_test_...\" works against the sandbox."
+        }
+      },
+      "required": [
+        "origin",
+        "destination",
+        "departure_date",
+        "_apiKey"
+      ]
+    }
+  }
+]
